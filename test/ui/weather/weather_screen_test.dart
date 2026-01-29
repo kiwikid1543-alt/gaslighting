@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_gaslighting/data/model/weather_model.dart';
-import 'package:flutter_gaslighting/data/repository/weather_repository.dart';
-import 'package:flutter_gaslighting/ui/weather/weather_screen.dart';
-import 'package:flutter_gaslighting/ui/weather/weather_view_model.dart';
+import 'package:flutter_gaslighting/data/model/weather_dto.dart';
+import 'package:flutter_gaslighting/data/repository/weather_repository_impl.dart';
+import 'package:flutter_gaslighting/presentaion/page/weather_screen.dart';
+import 'package:flutter_gaslighting/presentaion/page/weather_screen_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

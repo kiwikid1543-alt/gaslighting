@@ -1,6 +1,7 @@
 # Antigravity Setting
 
 1. 전역 프롬프트 설정
+
 ```
 # Role: Senior Software Architect & CTO
 

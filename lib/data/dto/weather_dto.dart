@@ -1,4 +1,4 @@
-class WeatherResponse {
+class WeatherDto {
   final double latitude;
   final double longitude;
   final double generationtimeMs;
@@ -6,9 +6,9 @@ class WeatherResponse {
   final String timezone;
   final String timezoneAbbreviation;
   final double elevation;
-  final CurrentWeather currentWeather;
+  final CurrentWeatherDto currentWeather;
 
-  WeatherResponse({
+  WeatherDto({
     required this.latitude,
     required this.longitude,
     required this.generationtimeMs,
@@ -19,8 +19,8 @@ class WeatherResponse {
     required this.currentWeather,
   });
 
-  factory WeatherResponse.fromJson(Map<String, dynamic> json) {
-    return WeatherResponse(
+  factory WeatherDto.fromJson(Map<String, dynamic> json) {
+    return WeatherDto(
       latitude: (json['latitude'] as num).toDouble(),
       longitude: (json['longitude'] as num).toDouble(),
       generationtimeMs: (json['generationtime_ms'] as num).toDouble(),
@@ -28,7 +28,7 @@ class WeatherResponse {
       timezone: json['timezone'] as String,
       timezoneAbbreviation: json['timezone_abbreviation'] as String,
       elevation: (json['elevation'] as num).toDouble(),
-      currentWeather: CurrentWeather.fromJson(
+      currentWeather: CurrentWeatherDto.fromJson(
         json['current_weather'] as Map<String, dynamic>,
       ),
     );
@@ -48,7 +48,7 @@ class WeatherResponse {
   }
 }
 
-class CurrentWeather {
+class CurrentWeatherDto {
   final double temperature;
   final double windspeed;
   final double winddirection;
@@ -56,7 +56,7 @@ class CurrentWeather {
   final int isDay;
   final String time;
 
-  CurrentWeather({
+  CurrentWeatherDto({
     required this.temperature,
     required this.windspeed,
     required this.winddirection,
@@ -65,8 +65,8 @@ class CurrentWeather {
     required this.time,
   });
 
-  factory CurrentWeather.fromJson(Map<String, dynamic> json) {
-    return CurrentWeather(
+  factory CurrentWeatherDto.fromJson(Map<String, dynamic> json) {
+    return CurrentWeatherDto(
       temperature: (json['temperature'] as num).toDouble(),
       windspeed: (json['windspeed'] as num).toDouble(),
       winddirection: (json['winddirection'] as num).toDouble(),

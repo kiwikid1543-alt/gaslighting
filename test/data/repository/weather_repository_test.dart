@@ -1,5 +1,5 @@
-import 'package:flutter_gaslighting/data/model/weather_model.dart';
-import 'package:flutter_gaslighting/data/repository/weather_repository.dart';
+import 'package:flutter_gaslighting/data/model/weather_dto.dart';
+import 'package:flutter_gaslighting/data/repository/weather_repository_impl.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';

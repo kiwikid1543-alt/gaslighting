@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gaslighting/domain/entity/weather.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'weather_view_model.dart';
-import '../../data/model/weather_model.dart';
+import 'weather_screen_view_model.dart';
 
 class WeatherScreen extends ConsumerWidget {
   const WeatherScreen({super.key});
@@ -43,7 +43,7 @@ class WeatherScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildWeatherContent(WeatherResponse weather) {
+  Widget _buildWeatherContent(Weather weather) {
     final current = weather.currentWeather;
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16.0),
